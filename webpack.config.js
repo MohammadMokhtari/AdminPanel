@@ -12,6 +12,27 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // target = 'browserslist'
 // }
 
+//config for all html pages in src folder
+let htmlPageNames = [
+  'index',
+  'role',
+  'roleDetails',
+  'ListPrduct',
+  'CreateProduct',
+  'productDetails',
+  'profileDetails',
+  'userList',
+  'userEdite',
+];
+let multipleHtmlPlugins = htmlPageNames.map((name) => {
+  return new HtmlWebpackPlugin({
+    template: `./src/${name}.html`,
+    filename: `${name}.html`,
+    chunks: [`${name}`],
+    hash: true,
+  });
+});
+
 module.exports = {
   mode: 'development',
   target: 'web',
@@ -23,7 +44,7 @@ module.exports = {
   output: {
     // path: path.resolve(__dirname, 'dist', 'assets'),
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[contenthash].bundel.js',
+    filename: '[name]_[contenthash].bundel.js',
     // assetModuleFilename: 'images/[hash][ext][query]'
     // publicPath: '/dist/assets/',
   },
