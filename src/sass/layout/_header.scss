@@ -1,0 +1,15 @@
+.header {
+  .aside-mobile-toggle {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 70px;
+    .icon-svg {
+      @include svg-icon-size(35px);
+    }
+  }
+  .nav-cm {
+    background-color: white;
+    padding: 10px;
+  }
+}

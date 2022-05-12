@@ -15,6 +15,7 @@ module.exports = {
   mode: 'development',
   target: 'web',
   entry: {
+    'js/vendor': './src/js/vendor.js',
     'js/app': './src/js/app.js',
     'css/style.bundel': './src/sass/style.scss',
   },
@@ -45,7 +46,7 @@ module.exports = {
               presets: [
                 [
                   '@babel/preset-env',
-                  { useBuiltIns: 'usage' /*corejs: { version: 3 }*/ },
+                  { useBuiltIns: 'usage', corejs: { version: 3 } },
                 ],
               ],
             },

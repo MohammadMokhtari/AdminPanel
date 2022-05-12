@@ -9,6 +9,7 @@ module.exports = {
   target: 'browserslist',
   entry: {
     'js/app': './src/js/app.js',
+    'js/vendor': './src/js/vendor.js',
     'css/style.bundel': './src/sass/style.scss',
   },
   output: {
@@ -38,7 +39,7 @@ module.exports = {
               presets: [
                 [
                   '@babel/preset-env',
-                  { useBuiltIns: 'usage' /*corejs: { version: 3 }*/ },
+                  { useBuiltIns: 'usage', corejs: { version: 3 } },
                 ],
               ],
             },

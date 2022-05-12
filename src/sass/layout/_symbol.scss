@@ -1,0 +1,11 @@
+.symbol {
+  display: inline-block;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 10px;
+  > img {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+  }
+}

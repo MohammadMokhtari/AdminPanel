@@ -1,0 +1,188 @@
+//
+// aside
+.aside {
+  background-color: $aside-bg;
+  position: fixed;
+  box-shadow: 0 0 28px 0 rgba(82, 63, 105, 0.05);
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  transition: all 0.1s ease-in;
+  z-index: 501;
+  transform: translateX(285px);
+  // Responsive
+  @include media-breakpoint-up(lg) {
+    transform: translateX(0px);
+    width: 285px;
+    display: block;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  // aside header
+  &-header {
+    padding: 0px 20px;
+    height: 65px;
+    display: flex;
+    background-color: #1a1a27;
+    justify-content: space-between;
+    align-items: center;
+    // aside Logo
+    .aside-logo {
+      img {
+        height: 30px;
+        vertical-align: middle;
+      }
+    }
+    // aside button toggle
+    .aside-btn-toggle {
+      transform: rotate(180deg);
+      transition: all 0.3s ease-in;
+      @include svg-icon-size(24px);
+      // @include media-breakpoint-down(lg) {
+      //   visibility: hidden;
+      // }
+    }
+    .aside-btn-toggle.active {
+      .icon-svg {
+        cursor: pointer;
+        @include svg-icon-color(#009ef7);
+      }
+    }
+    .aside-btn-toggle.rotete {
+      transform: rotate(0deg);
+      transform: translateY(10px);
+      transition: all 0.3s ease-in;
+    }
+  }
+  //aside body
+  &-body {
+    padding: 5px 20px;
+    width: 285px;
+    height: 100vh;
+    overflow: auto;
+    .aside-menu {
+      // aside content spred
+      .menu-content {
+        color: #4c4e6f !important;
+        margin: 20 20px;
+        font-size: 14px;
+        position: relative;
+        display: block;
+        font-family: YekanBold;
+      }
+      // aside menu item
+      &-item {
+        color: $aside-menu-link;
+        cursor: pointer;
+        margin: 6px 0px;
+        //
+        // aside subMenu
+        .asid-menu-sub {
+          max-height: 0px;
+          visibility: hidden;
+          opacity: 0;
+          padding: 5px 50px 5px 5px;
+          transition: all 0.4s ease;
+          .aside-menu-sub-item {
+            list-style-type: circle;
+            &:hover {
+              color: #009ef7;
+              a {
+                color: #fff;
+              }
+            }
+            margin: 8px 0;
+            a {
+              color: $aside-menu-link;
+              font-size: 14px;
+            }
+          }
+        }
+        .asid-menu-sub.show {
+          visibility: visible;
+          max-height: 400px;
+          opacity: 1;
+          transition: all 0.6s ease;
+        }
+      }
+      // &-item.show {
+      //   .asid-menu-sub {
+      //     visibility: visible;
+      //     max-height: 400px;
+      //     opacity: 1;
+      //     transition: all 0.6s ease;
+      //   }
+      // }
+      // aside menu link
+      &-link {
+        display: flex;
+        align-items: center;
+        align-content: center;
+        color: $aside-menu-link;
+        &:hover {
+          .aside-menu-icon {
+            .icon-svg {
+              @include svg-icon-color(#009ef7);
+            }
+          }
+          color: #fff;
+        }
+        .aside-menu-icon {
+          .icon-svg {
+            cursor: pointer;
+            @include svg-icon-color(#838383);
+            @include svg-icon-size(22px);
+          }
+          margin: 0 5px 0 10px;
+          // > span {
+          //   position: relative;
+          //   top: 5px;
+          //   font-size: 22px;
+          // }
+        }
+        .aside-menu-title {
+          flex-grow: 1;
+        }
+        .aside-menu-arrow {
+          transition: all 0.3s ease;
+
+          > span {
+            font-size: 19px;
+          }
+        }
+        .aside-menu-arrow.rotate {
+          transform: rotate(-90deg);
+          transition: all 0.2s ease;
+        }
+      }
+      // aside menu link Active
+      &-link.active {
+        background-color: #1a1a27;
+        z-index: 10;
+        color: #fff;
+        @include media-breakpoint-down(md) {
+          background-color: transparent;
+        }
+        .aside-menu-icon {
+          .icon-svg {
+            @include svg-icon-color(#009ef7);
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+.hide_logo {
+  display: none;
+}
+
+.aside.active {
+  transition: all 0.3s ease;
+  display: block;
+  transform: translateX(0);
+  width: 300px;
+}

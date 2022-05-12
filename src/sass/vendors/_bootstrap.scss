@@ -1,0 +1,19 @@
+// bootstrap initializaton
+@import '../../../node_modules/bootstrap-v4-rtl/scss/functions';
+@import '../../../node_modules/bootstrap-v4-rtl/scss/mixins';
+@import '../../../node_modules/bootstrap-v4-rtl/scss/variables';
+@import '../../../node_modules/bootstrap-v4-rtl/scss/utilities';
+//
+@import '../../../node_modules/bootstrap-v4-rtl/scss/type';
+@import '../../../node_modules/bootstrap-v4-rtl/scss/transitions';
+
+// import bootstrap components
+@import '../../../node_modules/bootstrap-v4-rtl/scss/grid';
+@import '../../../node_modules/bootstrap-v4-rtl/scss/card';
+@import '../../../node_modules/bootstrap-v4-rtl/scss/buttons';
+@import '../../../node_modules/bootstrap-v4-rtl/scss/navbar';
+@import '../../../node_modules/bootstrap-v4-rtl/scss/nav';
+@import '../../../node_modules/bootstrap-v4-rtl/scss/modal';
+@import '../../../node_modules/bootstrap-v4-rtl/scss/tables';
+@import '../../../node_modules/bootstrap-v4-rtl/scss/pagination';
+@import '../../../node_modules/bootstrap-v4-rtl/scss/carousel';

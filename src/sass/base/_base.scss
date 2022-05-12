@@ -1,0 +1,277 @@
+// base class
+.hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.1s ease;
+}
+.icon-svg-sm {
+  cursor: pointer;
+  @include svg-icon-size(20px);
+  @include svg-icon-hover(#009ef7);
+}
+.icon-svg-md {
+  cursor: pointer;
+  @include svg-icon-size(30px);
+  @include svg-icon-hover(#009ef7);
+}
+.icon-svg {
+  cursor: pointer;
+  @include svg-icon-color(#838383);
+  @include svg-icon-size(28px);
+  @include svg-icon-hover(#009ef7);
+}
+.icon-svg-lg {
+  cursor: pointer;
+  @include svg-icon-size(45px);
+}
+.icon-svg-primary {
+  @include svg-icon-color(#009ef7);
+}
+.svg-icon-warning {
+  @include svg-icon-color(#ffc700);
+}
+.svg-icon-danger {
+  @include svg-icon-color(#f1416c);
+}
+.svg-icon-success {
+  @include svg-icon-color(#50cd89);
+}
+
+.backDrop {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  padding: 0px;
+  @include transition(all 100ms ease);
+  background-color: rgba(0, 0, 0, 0.411);
+  z-index: 500;
+}
+.backDrop.visible {
+  opacity: 1;
+  visibility: visible;
+  @include media-breakpoint-up(lg) {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.bg-bd {
+  background-color: $body-color-defualt;
+}
+
+// Icons Base Styles
+.icon-success {
+  color: green;
+}
+
+.icon-danger {
+  color: rgb(221, 0, 0);
+}
+
+.icon-md {
+  font-size: 27px;
+}
+.icon-sm {
+  font-size: 20px;
+}
+.icon-lg {
+  font-size: 30px;
+}
+.icon-c {
+  position: relative;
+  top: 5px;
+  margin-right: 5px;
+}
+.icon-pc {
+  top: -7px;
+  cursor: pointer;
+}
+
+.icon-close {
+  cursor: pointer;
+}
+
+.caption-title {
+  color: #838383;
+}
+
+//border radius base styles
+.rounded-15 {
+  border-radius: 15px;
+}
+.rounded-7 {
+  border-radius: 7px;
+}
+
+.mt-70 {
+  margin-top: 70px;
+}
+
+//Font Size Base Styles
+.fs-16 {
+  font-size: 16px;
+}
+.fs-14 {
+  font-size: 14px;
+}
+.fs-13 {
+  font-size: 13px;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.fs-11 {
+  font-size: 11px;
+}
+.f-bold {
+  font-weight: 600;
+}
+
+// color base Style
+.c-black {
+  color: black;
+}
+.c-red {
+  color: red;
+}
+
+.flex-basis-150 {
+  flex-basis: 150px;
+}
+.flex-basis-80 {
+  flex-basis: 80px;
+}
+
+.text-gray-600 {
+  color: $text-gray-600;
+}
+
+.min-h-400 {
+  min-height: 450px;
+}
+.min-h-100v {
+  min-height: 100vh;
+}
+
+.shadow-box {
+  box-shadow: 0px 2px 20px rgba(189, 189, 189, 0.349);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.arrow_box {
+  padding: 15px;
+  font-weight: 600;
+}
+//Apex chart
+.apexcharts-tooltip-marker {
+  margin-right: 0px !important;
+  margin-left: 10px;
+}
+.apexcharts-legend-marker {
+  @extend .apexcharts-tooltip-marker;
+}
+.apexcharts-xaxistooltip {
+  padding: 13px 15px !important;
+  border: none !important;
+  border-radius: 12px !important;
+}
+
+.bg-light-success {
+  background-color: #e8fff3 !important;
+}
+.bg-light-danger {
+  background-color: #fff5f8 !important;
+}
+.bg-light-primary {
+  background-color: #f1faff !important;
+}
+.bg-light-warning {
+  background-color: #fff8dd !important;
+}
+
+.text-success-2 {
+  color: #50cd89 !important;
+}
+.text-warning-2 {
+  color: #ffc700 !important;
+}
+.text-primary-2 {
+  color: #009ef7 !important;
+}
+.text-danger-2 {
+  color: #f1416c !important;
+}
+.py-8 {
+  padding: 36px !important;
+}
+
+.custom-border {
+  border: 1px dashed #83838341;
+}
+
+.page-link {
+  border-radius: 5px;
+  margin: 0 2px;
+  padding: 10px;
+}
+
+.nav-link {
+  border-radius: 10px !important;
+  padding: 10px 35px !important;
+}
+.nav-link.active {
+  background-color: #009ef7 !important;
+}
+.tab-pane {
+  min-height: 100px;
+}
+
+.img-tumb {
+  width: 100px;
+  height: 100px;
+  border-radius: 25px;
+  object-fit: contain;
+}
+.img-tumb-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.swiper {
+  height: 570px !important;
+}
+.swiper-slide {
+  margin: 5px;
+  cursor: pointer;
+  // border-bottom: 1px solid #83838328;
+  // border-top: 1px solid #83838328;
+  // border-radius: 30px;
+}
+.bg-light-primary {
+  background-color: #f1faff !important;
+}
+.border-primary {
+  border: 1px dashed;
+  border-color: #009ef7 !important;
+}
+.product-option {
+  left: 50px;
+  top: 30px;
+}
+
+.card-rounded {
+  border-radius: 0.475rem;
+}
+.border-dashed {
+  border-style: dashed !important;
+  border-color: #e4e6ef;
+}

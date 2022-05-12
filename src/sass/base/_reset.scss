@@ -1,0 +1,34 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: $baseFont;
+  font-size: $root-font-size;
+}
+body {
+  overflow-x: hidden;
+  a {
+    text-decoration: none !important;
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none !important;
+    }
+  }
+  li {
+    list-style: none;
+  }
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.apexcharts-canvas {
+  margin: auto !important;
+}

@@ -31,7 +31,15 @@
     "webpack-dev-server": "^4.2.1"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^30.0.0",
+    "@popperjs/core": "^2.10.1",
+    "apexcharts": "^3.29.0",
+    "bootstrap": "^5.1.1",
     "bootstrap-v4-rtl": "^4.6.0-2",
-    "jquery": "^3.6.0"
+    "chart.js": "^3.5.1",
+    "jquery": "^3.6.0",
+    "owl.carousel": "^2.3.4",
+    "simplebar": "^5.3.5",
+    "swiper": "^7.0.8"
   }
 }
