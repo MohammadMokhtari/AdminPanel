@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanPlugin = require('clean-webpack-plugin');
 const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // let mode = 'development';
 // let target = 'web';
@@ -15,13 +16,14 @@ module.exports = {
   mode: 'development',
   target: 'web',
   entry: {
-    'js/vendor': './src/js/vendor.js',
-    'js/app': './src/js/app.js',
-    'css/style.bundel': './src/sass/style.scss',
+    'assets/js/vendor': './src/js/vendor.js',
+    'assets/js/app': './src/js/app.js',
+    'assets/css/style': './src/sass/style.scss',
   },
   output: {
-    path: path.resolve(__dirname, 'dist', 'assets'),
-    filename: '[name].bundel.js',
+    // path: path.resolve(__dirname, 'dist', 'assets'),
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[contenthash].bundel.js',
     // assetModuleFilename: 'images/[hash][ext][query]'
     // publicPath: '/dist/assets/',
   },
@@ -69,7 +71,7 @@ module.exports = {
         include: [/fonts/],
         type: 'asset/resource',
         generator: {
-          filename: 'fonts/[hash][ext][query]',
+          filename: 'assets/fonts/[hash][ext][query]',
         },
       },
       {
@@ -82,6 +84,10 @@ module.exports = {
     ],
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      hash: true,
+      template: './src/index.html',
+    }),
     new CleanPlugin.CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: '[name].css',
@@ -93,7 +99,7 @@ module.exports = {
       'window.jQuery': 'jquery',
     }),
     new CopyPlugin({
-      patterns: [{ from: './src/media/images', to: './images' }],
+      patterns: [{ from: './src/media/images', to: './assets/images' }],
     }),
   ],
 };
