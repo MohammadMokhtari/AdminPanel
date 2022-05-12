@@ -1,2 +1,2 @@
-# webpack-config
-webpack initial setup
+# Admin Template
+Sample Admin Template
