@@ -4,8 +4,8 @@
   <a href="https://github.com/github_username/repo_name">
     <img src="https://docs.google.com/uc?id=1ZqPpEVdp_VWZb1glm1k3gYmNgbtpVhuA" height="40px">
   </a>
-  
-Admin Panel Ssample Project
+   
+Asana Admin Panel Sample Project
   
 <h3 align="center">screenshot</h3>
 
